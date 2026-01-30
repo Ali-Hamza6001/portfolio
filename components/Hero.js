@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Download } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -64,20 +65,28 @@ export default function Hero() {
               hand-on experience.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#contact"
-                className="bg-foreground text-background px-10 py-5 font-black uppercase tracking-tighter hover:bg-background hover:text-foreground border-2 border-foreground transition-all hard-shadow active:translate-x-1 active:translate-y-1 active:shadow-none text-center"
-              >
-                Start Project
-              </a>
-              <a
-                href="#projects"
-                className="bg-background text-foreground px-10 py-5 font-black uppercase tracking-tighter hover:bg-foreground hover:text-background border-2 border-foreground transition-all hard-shadow active:translate-x-1 active:translate-y-1 active:shadow-none text-center"
-              >
-                View Work
-              </a>
-            </div>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+  <a
+  href="#projects"
+  className="bg-foreground text-background px-10 py-5 font-black uppercase tracking-tighter hover:bg-background hover:text-foreground border-2 border-foreground transition-all hard-shadow active:translate-x-1 active:translate-y-1 active:shadow-none text-center"
+>
+  View Work
+</a>
+
+
+  <a
+    href="/Resume.pdf"
+    download
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-secondary text-foreground px-10 py-5 font-black uppercase tracking-tighter hover:bg-foreground hover:text-background border-2 border-foreground transition-all hard-shadow active:translate-x-1 active:translate-y-1 active:shadow-none text-center inline-flex items-center justify-center gap-3"
+  >
+    <Download className="w-5 h-5" />
+    Download Resume
+  </a>
+</div>
+
+
           </motion.div>
 
           {/* IMAGE SIDE */}
